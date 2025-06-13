@@ -4,11 +4,11 @@ import {
   Hero,
   Skills,
   Reviews,
+  Contact,
   Projects,
   Navigation,
+  ScrollToTop,
 } from "@/components/common";
-// import { Contact } from "@/components/sections/Contact";
-// import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
 const Index = () => {
   return (
@@ -18,8 +18,8 @@ const Index = () => {
       <Skills />
       <Reviews />
       <Projects />
-      {/*<Contact />
-      <ScrollToTop /> */}
+      <Contact />
+      <ScrollToTop />
     </div>
   );
 };
