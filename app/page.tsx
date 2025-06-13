@@ -1,8 +1,6 @@
 import Image from "next/image";
 
-import { Hero } from "@/components/common";
-import { Skills } from "@/components/common";
-// import { Reviews } from "@/components/sections/Reviews";
+import { Hero, Skills, Reviews } from "@/components/common";
 // import { Projects } from "@/components/sections/Projects";
 // import { Contact } from "@/components/sections/Contact";
 // import { Navigation } from "@/components/layout/Navigation";
@@ -14,8 +12,8 @@ const Index = () => {
       {/* <Navigation /> */}
       <Hero />
       <Skills />
-      {/* <Reviews />
-      <Projects />
+      <Reviews />
+      {/*<Projects />
       <Contact />
       <ScrollToTop /> */}
     </div>
