@@ -8,7 +8,7 @@ import {
   ScrollToTop,
 } from "@/components/common";
 
-const Index = () => {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <Navigation />
@@ -20,6 +20,4 @@ const Index = () => {
       <ScrollToTop />
     </div>
   );
-};
-
-export default Index;
+}

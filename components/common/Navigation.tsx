@@ -20,7 +20,7 @@ export default function Navigation() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const navItems = ["About", "Skills", "Projects", "Contact"];
+  const navItems = ["ABOUT", "SKILLS", "PROJECTS", "CONTACT"];
 
   return (
     <nav
@@ -28,9 +28,10 @@ export default function Navigation() {
         scrolled ? "glass-morphism py-4" : "py-6"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="font-display text-2xl font-bold gradient-text">
-          Portfolio
+      <div className="container mx-auto p-4 top-0 rounded flex justify-between items-center">
+        <div className="font-display text-2xl text-emerald-300 font-bold gradient-text">
+          COLIN ADO
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-300 transition-all duration-300 group-hover:w-full"></span>
         </div>
 
         {/* Desktop Navigation */}
