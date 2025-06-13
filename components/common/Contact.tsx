@@ -16,7 +16,7 @@ export default function Contact() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="glass-morphism border-gray-800 p-8 md:p-12">
+          <Card className="glass-morphism border-gray-800 bg-gray-950 p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <h3 className="font-display text-2xl font-bold text-white">

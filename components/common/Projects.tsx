@@ -40,7 +40,7 @@ const ProjectCard = ({
   index: number;
 }) => {
   return (
-    <Card className="glass-morphism border-gray-800 overflow-hidden group hover:border-emerald-300/50 transition-all duration-300">
+    <Card className="glass-morphism bg-gray-950 border-gray-800 overflow-hidden group hover:border-emerald-300/50 transition-all duration-300">
       <div className="relative">
         <img
           src={project.image}
