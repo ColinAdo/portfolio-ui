@@ -1,0 +1,79 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+export default function Navigation() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const navItems = ["About", "Skills", "Projects", "Contact"];
+
+  return (
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "glass-morphism py-4" : "py-6"
+      }`}
+    >
+      <div className="container mx-auto px-6 flex justify-between items-center">
+        <div className="font-display text-2xl font-bold gradient-text">
+          Portfolio
+        </div>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-8">
+          {navItems.map((item) => (
+            <button
+              key={item}
+              onClick={() => scrollToSection(item.toLowerCase())}
+              className="text-gray-300 hover:text-emerald-300 transition-colors duration-300 relative group"
+            >
+              {item}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-300 transition-all duration-300 group-hover:w-full"></span>
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="text-gray-300 hover:text-emerald-300 transition-colors">
+                <Menu className="w-6 h-6" />
+              </button>
+            </SheetTrigger>
+            <SheetContent
+              side="right"
+              className="w-[300px] bg-gray-900 border-gray-800"
+            >
+              <div className="flex flex-col space-y-6 mt-8">
+                {navItems.map((item) => (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(item.toLowerCase())}
+                    className="text-left text-lg text-gray-300 hover:text-emerald-300 transition-colors duration-300 py-2"
+                  >
+                    {item}
+                  </button>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </nav>
+  );
+}
