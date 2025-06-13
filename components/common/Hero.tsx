@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   const scrollToProjects = () => {
@@ -17,11 +18,8 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 order-2 lg:order-1">
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="block text-white">Creative</span>
-              <span className="block gradient-text animate-float">
-                Developer
-              </span>
+            <h1 className="font-display text-2xl md:text-6xl lg:text-4xl font-bold leading-tight">
+              <span className="block text-white">Software Engineer</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
@@ -54,8 +52,10 @@ export default function Hero() {
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-morphism emerald-glow">
-                <img
-                  src="/placeholder.svg"
+                <Image
+                  src="/colin.jpg"
+                  width={384}
+                  height={384}
                   alt="Professional headshot"
                   className="w-full h-full object-cover"
                 />
