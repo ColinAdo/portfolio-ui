@@ -28,7 +28,7 @@ export default function Navigation() {
         scrolled ? "glass-morphism py-4" : "py-6"
       }`}
     >
-      <div className="container mx-auto top-0 sm:px-10 px-2 rounded flex justify-between items-center">
+      <div className="container mx-auto top-0 sm:px-0 px-2 rounded flex justify-between items-center">
         <div className="font-display text-2xl text-emerald-300 font-bold gradient-text">
           COLIN ADO
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-300 transition-all duration-300 group-hover:w-full"></span>
@@ -40,7 +40,7 @@ export default function Navigation() {
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
-              className="text-gray-300 hover:text-emerald-300 transition-colors duration-300 relative group"
+              className="text-gray-300 font-semibold hover:text-emerald-300 transition-colors duration-300 relative group"
             >
               {item}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-300 transition-all duration-300 group-hover:w-full"></span>
