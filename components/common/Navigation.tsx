@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
