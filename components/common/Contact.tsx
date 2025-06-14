@@ -1,5 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  Twitter,
+  Mail,
+  PhoneCall,
+  MapPin,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -33,16 +43,22 @@ export default function Contact() {
 
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
-                      <span className="text-emerald-300">📧</span>
-                      <span>hello@yourportfolio.com</span>
+                      <span className="text-emerald-300">
+                        <Mail />
+                      </span>
+                      <span>mail@colinadore.tech</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <span className="text-emerald-300">📱</span>
-                      <span>+1 (555) 123-4567</span>
+                      <span className="text-emerald-300">
+                        <PhoneCall />
+                      </span>
+                      <span>+245701893733</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <span className="text-emerald-300">📍</span>
-                      <span>San Francisco, CA</span>
+                      <span className="text-emerald-300">
+                        <MapPin />
+                      </span>
+                      <span>Nairobi, Kenya</span>
                     </div>
                   </div>
                 </div>
@@ -57,25 +73,37 @@ export default function Contact() {
                     Send Email
                   </Button>
 
-                  <div className="grid grid-cols-2 gap-3">
-                    <Button
-                      variant="outline"
-                      className="border-emerald-300 text-emerald-300 hover:bg-emerald-300 hover:text-black"
+                  <div className="flex gap-12 sm:ml-12">
+                    <Link
+                      href="#"
+                      className="text-emerald-500 hover:text-emerald-300 border-none hover:text-black"
                     >
-                      LinkedIn
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="border-emerald-300 text-emerald-300 hover:bg-emerald-300 hover:text-black"
+                      <Linkedin />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="text-emerald-500 hover:text-emerald-300 border-none hover:text-black"
                     >
-                      GitHub
-                    </Button>
+                      <Github />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="text-emerald-500 hover:text-emerald-300 border-none hover:text-black"
+                    >
+                      <Instagram />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="text-emerald-500 hover:text-emerald-300 border-none hover:text-black"
+                    >
+                      <Twitter />
+                    </Link>
                   </div>
                 </div>
 
                 <div className="pt-6 border-t border-gray-800">
                   <p className="text-sm text-gray-400 text-center">
-                    Typically respond within 24 hours
+                    Typically respond ASAP
                   </p>
                 </div>
               </div>
@@ -84,9 +112,7 @@ export default function Contact() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-400">
-            © 2025 Portfolio. Crafted with ❤️ and lots of ☕
-          </p>
+          <p className="text-gray-400">&copy; 2025 All rights reserved Colin</p>
         </div>
       </div>
     </section>
