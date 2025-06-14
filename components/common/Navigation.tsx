@@ -1,8 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Menu, X } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,30 +56,25 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <button className="text-gray-300 hover:text-emerald-300 transition-colors">
-                <Menu className="w-6 h-6" />
-              </button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-[300px] bg-gray-900 border-gray-800"
-            >
-              <div className="flex flex-col space-y-6 mt-8">
-                {navItems.map((item) => (
-                  <button
-                    key={item}
-                    onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-left text-lg text-gray-300 hover:text-emerald-300 transition-colors duration-300 py-2"
-                  >
-                    {item}
-                  </button>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+        <div className="md:hidden mr-2">
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-gray-300 border-emerald-300 hover:text-emerald-300 transition-colors">
+              <Menu className="w-6 h-6" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="mr-6 bg-gray-950 text-emerald-300 border-emerald-300">
+              <DropdownMenuLabel>Colin Ado</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              {navItems.map((item) => (
+                <DropdownMenuItem
+                  key={item}
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className="text-emerald-200 transition-colors duration-300"
+                >
+                  {item}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </nav>
