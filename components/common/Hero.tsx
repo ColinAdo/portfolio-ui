@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-6 pt-20"
+      className="min-h-screen flex items-center justify-center sm:px-18 px-6 pt-20"
     >
       <div className="container mx-auto text-center animate-fade-in">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

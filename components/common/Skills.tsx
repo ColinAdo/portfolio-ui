@@ -58,7 +58,7 @@ const SkillBar = ({
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-6">
+    <section id="skills" className="py-20 sm:px-18 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
