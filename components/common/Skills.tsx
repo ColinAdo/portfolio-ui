@@ -1,64 +1,62 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
+import React from "react";
+import Image from "next/image";
 
 const skills = [
-  { name: "React & Next.js", level: 95 },
-  { name: "TypeScript", level: 90 },
-  { name: "Node.js", level: 85 },
-  { name: "Python", level: 80 },
-  { name: "UI/UX Design", level: 88 },
-  { name: "Database Design", level: 82 },
+  {
+    name: "APIs",
+    img: "https://cdn-icons-png.flaticon.com/512/3407/3407038.png",
+  },
+  {
+    name: "Django Rest Framework",
+    img: "https://www.django-rest-framework.org/img/logo.png",
+  },
+  {
+    name: "Django",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg",
+  },
+  {
+    name: "React",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+  },
+  {
+    name: "React Native",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+  },
+  {
+    name: "Next.js",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "PowerBI",
+    img: "https://powerbi.microsoft.com/pictures/shared/social/social-default-image.png",
+  },
+  {
+    name: "Docker",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+  },
+  {
+    name: "Git & Github",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+  },
 ];
 
-const SkillBar = ({
-  skill,
-  index,
-}: {
-  skill: (typeof skills)[0];
-  index: number;
-}) => {
-  const [visible, setVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => setVisible(true), index * 200);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [index]);
-
-  return (
-    <div ref={ref} className="space-y-2">
-      <div className="flex justify-between items-center">
-        <span className="text-gray-300 font-medium">{skill.name}</span>
-        <span className="text-emerald-300 font-semibold">{skill.level}%</span>
-      </div>
-      <div className="w-full bg-gray-800 rounded-full h-2">
-        <div
-          className={`h-2 bg-gradient-to-r from-emerald-400 to-emerald-300 rounded-full transition-all duration-1000 ease-out ${
-            visible ? `w-[${skill.level}%]` : "w-0"
-          }`}
-          style={{ width: visible ? `${skill.level}%` : "0%" }}
-        />
-      </div>
-    </div>
-  );
-};
+const SkillCard = ({ name, img }: { name: string; img: string }) => (
+  <div className="flex flex-col items-center shadow hover:scale-105 transition-transform">
+    <Image
+      src={img}
+      alt={name}
+      width={64}
+      height={64}
+      className="object-contain mb-3"
+      loading="lazy"
+    />
+    <span className="text-white text-lg font-medium text-center">{name}</span>
+  </div>
+);
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 sm:px-18 px-6">
+    <section id="skills" className="py-20 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
@@ -68,46 +66,37 @@ export default function Skills() {
             Technologies and tools I use to bring ideas to life
           </p>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            {skills.map((skill, index) => (
-              <SkillBar key={skill.name} skill={skill} index={index} />
-            ))}
-          </div>
-
-          <div className="glass-morphism p-8 rounded-2xl">
-            <h3 className="font-display text-2xl font-bold text-white mb-4">
-              What I Bring to the Table
-            </h3>
-            <div className="space-y-4 text-gray-300">
-              <p className="leading-relaxed">
-                ✨{" "}
-                <span className="text-emerald-300">Full-stack expertise</span>{" "}
-                with modern frameworks and technologies
-              </p>
-              <p className="leading-relaxed">
-                🎨{" "}
-                <span className="text-emerald-300">
-                  Design-focused development
-                </span>{" "}
-                creating beautiful, intuitive interfaces
-              </p>
-              <p className="leading-relaxed">
-                🚀{" "}
-                <span className="text-emerald-300">
-                  Performance optimization
-                </span>{" "}
-                ensuring fast, scalable applications
-              </p>
-              <p className="leading-relaxed">
-                🔧{" "}
-                <span className="text-emerald-300">
-                  Problem-solving mindset
-                </span>{" "}
-                tackling complex technical challenges
-              </p>
-            </div>
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-8 justify-items-center mb-12">
+          {skills.map((skill) => (
+            <SkillCard key={skill.name} name={skill.name} img={skill.img} />
+          ))}
+        </div>
+        <div className="glass-morphism p-8 rounded-2xl max-w-2xl mx-auto">
+          <h3 className="font-display text-2xl font-bold text-white mb-4">
+            What I Bring to the Table
+          </h3>
+          <div className="space-y-4 text-gray-300">
+            <p className="leading-relaxed">
+              ✨ <span className="text-emerald-300">Full-stack expertise</span>{" "}
+              with modern frameworks and technologies
+            </p>
+            <p className="leading-relaxed">
+              🎨{" "}
+              <span className="text-emerald-300">
+                Design-focused development
+              </span>{" "}
+              creating beautiful, intuitive interfaces
+            </p>
+            <p className="leading-relaxed">
+              🚀{" "}
+              <span className="text-emerald-300">Performance optimization</span>{" "}
+              ensuring fast, scalable applications
+            </p>
+            <p className="leading-relaxed">
+              🔧{" "}
+              <span className="text-emerald-300">Problem-solving mindset</span>{" "}
+              tackling complex technical challenges
+            </p>
           </div>
         </div>
       </div>
