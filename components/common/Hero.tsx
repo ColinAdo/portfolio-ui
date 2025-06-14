@@ -19,7 +19,10 @@ export default function Hero() {
           {/* Text Content */}
           <div className="space-y-6 order-2 lg:order-1">
             <h1 className="font-display text-2xl md:text-6xl lg:text-4xl font-bold leading-tight">
-              <span className="block text-white">Software Engineer</span>
+              <span className="block text-white">Hi my name is Colin Ado</span>
+              <span className="block gradient-text animate-float text-emerald-300">
+                a passionate Software Engineer
+              </span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
@@ -36,12 +39,12 @@ export default function Hero() {
                 onClick={scrollToProjects}
                 className="bg-emerald-300 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full emerald-glow transition-all duration-300"
               >
-                View My Work
+                View my work
               </Button>
 
               <Button
                 variant="outline"
-                className="border-emerald-300 text-emerald-300 hover:bg-emerald-300 hover:text-black px-8 py-3 rounded-full transition-all duration-300"
+                className="border-emerald-300 text-emerald-500 hover:bg-emerald-300 hover:text-black px-8 py-3 rounded-full transition-all duration-300"
               >
                 Download Resume
               </Button>
@@ -63,10 +66,6 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-300/20 to-transparent"></div>
             </div>
           </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="text-emerald-300 w-6 h-6" />
         </div>
       </div>
     </section>
