@@ -44,8 +44,8 @@ export default function Hero() {
               </Button>
 
               <Link href="/resume" className="text-white">
-                <span className="flex text-emerald-100 hover:text-emerald-300 font-semibold">
-                  <Lk /> My Resume
+                <span className="flex items-center gap-1 text-emerald-100 hover:text-emerald-300 font-semibold">
+                  <Lk className="w-4 h-4" /> My Resume
                 </span>
               </Link>
             </div>
