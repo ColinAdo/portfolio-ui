@@ -46,7 +46,7 @@ export default function Contact() {
                       <span className="text-emerald-300">
                         <Mail />
                       </span>
-                      <span>mail@colinadore.tech</span>
+                      <span>support@mail.colinadore.tech</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <span className="text-emerald-300">
