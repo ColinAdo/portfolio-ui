@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Link as Lk } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   const scrollToProjects = () => {
@@ -41,12 +43,11 @@ export default function Hero() {
                 View my work
               </Button>
 
-              <Button
-                variant="outline"
-                className="border-emerald-300 text-emerald-500 hover:bg-emerald-300 hover:text-black px-8 py-3 rounded-full transition-all duration-300"
-              >
-                Download Resume
-              </Button>
+              <Link href="/resume" className="text-white">
+                <span className="flex text-emerald-100 hover:text-emerald-300 font-semibold">
+                  <Lk /> My Resume
+                </span>
+              </Link>
             </div>
           </div>
 

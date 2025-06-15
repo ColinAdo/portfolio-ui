@@ -87,7 +87,7 @@ export default function Resume() {
           <h2 className="text-2xl font-bold text-white flex items-center gap-2 mb-4">
             <Sparkles className="text-emerald-300" size={22} /> Summary
           </h2>
-          <div className="bg-gray-900/50 rounded-xl p-5 text-gray-200 border border-emerald-300/10 text-lg shadow animate-fade-in">
+          <div className="bg-transparent rounded-xl p-5 text-gray-200 border border-emerald-300/20 text-lg shadow animate-fade-in">
             {summary}
           </div>
         </section>
@@ -101,7 +101,7 @@ export default function Resume() {
             {experience.map((exp, i) => (
               <div
                 key={exp.role + i}
-                className="p-5 rounded-xl glass-morphism border border-emerald-400/10 group hover:shadow-lg transition-shadow animate-fade-in"
+                className="p-5 rounded-xl bg-transparent border-emerald-300/20 border group hover:shadow-lg transition-shadow animate-fade-in"
               >
                 <div className="flex justify-between items-center">
                   <span className="text-emerald-300 font-semibold text-lg">
@@ -125,7 +125,7 @@ export default function Resume() {
             {projects.map((proj, idx) => (
               <div
                 key={proj.name}
-                className="p-4 rounded-xl bg-gray-800/40 border border-emerald-400/10 hover:shadow-lg transition-shadow animate-fade-in"
+                className="p-4 rounded-xl bg-transparent border-emerald-300/20 border hover:shadow-lg transition-shadow animate-fade-in"
               >
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                   <div>

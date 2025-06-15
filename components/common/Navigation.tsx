@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
+import Link from "next/link";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +38,8 @@ export default function Navigation() {
     >
       <div className="container mx-auto top-0 sm:px-0 px-2 rounded flex justify-between items-center">
         <div className="font-display text-2xl text-emerald-300 font-bold gradient-text">
-          COLIN ADO
+          <Link href="/">COLIN ADO</Link>
+
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-300 transition-all duration-300 group-hover:w-full"></span>
         </div>
 
