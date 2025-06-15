@@ -103,7 +103,7 @@ export const professionalSkills = [
 ];
 
 export const languages = [
-  { name: "English", flag: "🇬🇧", level: "Native" },
-  { name: "French", flag: "🇫🇷", level: "Professional" },
-  { name: "Spanish", flag: "🇪🇸", level: "Conversational" },
+  { name: "English", level: "Native" },
+  { name: "French", level: "Professional" },
+  { name: "Spanish", level: "Conversational" },
 ];

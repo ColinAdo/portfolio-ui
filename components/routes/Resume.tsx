@@ -204,7 +204,6 @@ export default function Resume() {
                 key={lang.name}
                 className="flex items-center gap-2 bg-gray-800/40 rounded-full px-4 py-2 text-emerald-200 text-sm font-medium shadow"
               >
-                <span className="text-2xl mr-1">{lang.flag}</span>
                 {lang.name}
                 <span className="ml-2 text-emerald-400">({lang.level})</span>
               </div>
