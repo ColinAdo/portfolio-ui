@@ -67,7 +67,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <a href="mailto:inbox@email.colinadore.tech?subject=Hello&body=I%20want%20to%20get%20in%20touch">
+                  <a href="mailto:inbox@mail.colinadore.tech?subject=Hello&body=I%20want%20to%20get%20in%20touch">
                     <Button
                       className="w-full bg-emerald-300 mb-4 hover:bg-emerald-400 hover:cursor-pointer text-black font-semibold py-3 emerald-glow animate-glow"
                       size="lg"
