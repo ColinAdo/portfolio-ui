@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link as LinkIcon } from "lucide-react";
 import { projects } from "@/data/projects";
+import { Link as LinkIcon } from "lucide-react";
 import Link from "next/link";
 
 const ProjectCard = ({
