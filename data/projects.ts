@@ -13,7 +13,7 @@ export const projects = [
       "Typescript",
       "Nextjs",
       "Tailwind CSS",
-      "PostgreSQL",
+      "Neon Postgres",
       "Shadcn UI",
       "Groq AI",
       "WebSockets",

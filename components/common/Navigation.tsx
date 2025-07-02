@@ -49,7 +49,7 @@ export default function Navigation() {
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
-              className="text-gray-300 font-semibold hover:text-emerald-300 transition-colors duration-300 relative group"
+              className="text-gray-300 font-semibold hover:text-emerald-300 hover:cursor-pointer transition-colors duration-300 relative group"
             >
               {item}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-300 transition-all duration-300 group-hover:w-full"></span>
@@ -60,7 +60,7 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         <div className="md:hidden mr-2">
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-gray-300 border-emerald-300 hover:text-emerald-300 transition-colors">
+            <DropdownMenuTrigger className="text-gray-300 hover:cursor-pointer border-emerald-300 hover:text-emerald-300 transition-colors">
               <Menu className="w-6 h-6" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mr-6 bg-gray-950 text-emerald-300 border-emerald-300">
@@ -70,7 +70,7 @@ export default function Navigation() {
                 <DropdownMenuItem
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-emerald-200 transition-colors duration-300"
+                  className="text-emerald-200 hover:!bg-emerald-200 hover:cursor-pointer"
                 >
                   {item}
                 </DropdownMenuItem>

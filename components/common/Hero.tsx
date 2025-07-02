@@ -38,7 +38,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center pt-8">
               <Button
                 onClick={scrollToProjects}
-                className="bg-emerald-300 hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full emerald-glow transition-all duration-300"
+                className="bg-emerald-300 hover:cursor-pointer hover:bg-emerald-400 text-black font-semibold px-8 py-3 rounded-full emerald-glow transition-all duration-300"
               >
                 View my work
               </Button>

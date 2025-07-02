@@ -8,6 +8,7 @@ import {
   Mail,
   PhoneCall,
   MapPin,
+  Facebook,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -35,10 +36,10 @@ export default function Contact() {
 
                 <div className="space-y-4 text-gray-300">
                   <p className="leading-relaxed">
-                    I'm always interested in hearing about new opportunities and
-                    exciting projects. Whether you have a specific idea in mind
-                    or just want to chat about possibilities, I'd love to hear
-                    from you.
+                    I&apos;m always interested in hearing about new
+                    opportunities and exciting projects. Whether you have a
+                    specific idea in mind or just want to chat about
+                    possibilities, I&apos;d love to hear from you.
                   </p>
 
                   <div className="space-y-3">
@@ -46,7 +47,7 @@ export default function Contact() {
                       <span className="text-emerald-300">
                         <Mail />
                       </span>
-                      <span>support@mail.colinadore.tech</span>
+                      <span>inbox@mail.colinadore.tech</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <span className="text-emerald-300">
@@ -66,34 +67,47 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <Button
-                    className="w-full bg-emerald-300 hover:bg-emerald-400 text-black font-semibold py-3 emerald-glow animate-glow"
-                    size="lg"
-                  >
-                    Send Email
-                  </Button>
+                  <a href="mailto:inbox@email.colinadore.tech?subject=Hello&body=I%20want%20to%20get%20in%20touch">
+                    <Button
+                      className="w-full bg-emerald-300 mb-4 hover:bg-emerald-400 hover:cursor-pointer text-black font-semibold py-3 emerald-glow animate-glow"
+                      size="lg"
+                    >
+                      Send Email
+                    </Button>
+                  </a>
 
                   <div className="flex gap-12 sm:ml-12">
                     <Link
-                      href="#"
+                      href="https://www.linkedin.com/in/colinado"
+                      target="_blank"
                       className="text-emerald-500 hover:text-emerald-300 border-none hover:text-black"
                     >
                       <Linkedin />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://github.com/ColinAdo"
+                      target="_blank"
                       className="text-emerald-500 hover:text-emerald-300 border-none hover:text-black"
                     >
                       <Github />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://www.instagram.com/colinadore30"
+                      target="_blank"
                       className="text-emerald-500 hover:text-emerald-300 border-none hover:text-black"
                     >
                       <Instagram />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://www.facebook.com/colinadore30"
+                      target="_blank"
+                      className="text-emerald-500 hover:text-emerald-300 border-none hover:text-black"
+                    >
+                      <Facebook />
+                    </Link>
+                    <Link
+                      href="https://x.com/Colin_Ado"
+                      target="_blank"
                       className="text-emerald-500 hover:text-emerald-300 border-none hover:text-black"
                     >
                       <Twitter />
