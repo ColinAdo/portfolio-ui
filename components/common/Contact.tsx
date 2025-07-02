@@ -76,7 +76,7 @@ export default function Contact() {
                     </Button>
                   </a>
 
-                  <div className="flex gap-12 sm:ml-12">
+                  <div className="flex gap-8 sm:gap-12 sm:ml-12">
                     <Link
                       href="https://www.linkedin.com/in/colinado"
                       target="_blank"
