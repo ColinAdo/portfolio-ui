@@ -1,12 +1,26 @@
 export const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Monie",
     description:
-      "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and real-time inventory.",
-    image: "/colin.jpg",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    demoUrl: "#",
-    codeUrl: "#",
+      "Monie is a smart money-tracking web app designed to give users \
+       clear insights into their income and spending habits. It features \
+        intuitive visual charts for better financial clarity and leverages AI \
+         to analyze user expenditures, identify patterns, and provide personalized \
+          financial insights. Monie helps users make informed decisions about their finances.",
+    image: "/monie.png",
+    tech: [
+      "Django Rest Framwork",
+      "Typescript",
+      "Nextjs",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Shadcn UI",
+      "Groq AI",
+      "WebSockets",
+    ],
+    demoUrl: "https://monie.colinadore.tech",
+    apiCodeUrl: "https://github.com/ColinAdo/monie-api",
+    uiCodeUrl: "https://github.com/ColinAdo/monie-ui",
   },
   {
     title: "Task Management App",
@@ -15,7 +29,8 @@ export const projects = [
     image: "/colin.jpg",
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
     demoUrl: "#",
-    codeUrl: "#",
+    apiCodeUrl: "#",
+    uiCodeUrl: "#",
   },
   {
     title: "Analytics Dashboard",
@@ -24,6 +39,7 @@ export const projects = [
     image: "/colin.jpg",
     tech: ["React", "D3.js", "Python", "FastAPI"],
     demoUrl: "#",
-    codeUrl: "#",
+    apiCodeUrl: "#",
+    uiCodeUrl: "#",
   },
 ];

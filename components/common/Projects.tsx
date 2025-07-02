@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link } from "lucide-react";
+import { Link as LinkIcon } from "lucide-react";
 import { projects } from "@/data/projects";
+import Link from "next/link";
 
 const ProjectCard = ({
   project,
@@ -26,7 +27,9 @@ const ProjectCard = ({
           {project.title}
         </h3>
 
-        <p className="text-gray-300 leading-relaxed">{project.description}</p>
+        <p className="text-gray-300 leading-relaxed text-justify">
+          {project.description}
+        </p>
 
         <div className="flex flex-wrap gap-2">
           {project.tech.map((tech) => (
@@ -40,20 +43,30 @@ const ProjectCard = ({
         </div>
 
         <div className="flex gap-3 pt-2">
-          <Button
-            size="sm"
-            className="bg-emerald-300 hover:bg-emerald-400 text-black emerald-glow"
+          <Link
+            href={project.demoUrl}
+            target="_blank"
+            className="border border-emerald-300 text-black text-sm font-semibold bg-emerald-200 rounded-sm py-1 px-2 hover:bg-emerald-300 hover:text-black emerald-glow"
           >
-            <Link className="w-4 h-4 mr-2" />
-            Live Demo
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            className="border-emerald-300 text-emerald-300 hover:bg-emerald-300 hover:text-black"
+            <div className="flex items-center">
+              <LinkIcon className="w-4 h-4 mr-2" />
+              Live Demo
+            </div>
+          </Link>
+          <Link
+            href={project.apiCodeUrl}
+            target="_blank"
+            className="border border-emerald-300 text-sm font-semibold bg-white rounded-sm py-1 px-2 text-blue-400 hover:bg-emerald-300 hover:text-black"
           >
-            Code
-          </Button>
+            API Code
+          </Link>
+          <Link
+            href={project.uiCodeUrl}
+            target="_blank"
+            className="border border-emerald-300 text-sm font-semibold bg-white rounded-sm py-1 px-2 text-blue-400 hover:bg-emerald-300 hover:text-black"
+          >
+            UI Code
+          </Link>
         </div>
       </div>
     </Card>
