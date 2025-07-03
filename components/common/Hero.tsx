@@ -43,7 +43,11 @@ export default function Hero() {
                 View my work
               </Button>
 
-              <Link href="/resume" className="text-white">
+              <Link
+                href="https://drive.google.com/file/d/1ylVU7KhOG9xjM0o9mt586RuhzRwh-TfF/view?usp=sharing"
+                target="_blank"
+                className="text-white"
+              >
                 <span className="flex items-center gap-1 text-emerald-100 hover:text-emerald-300 font-semibold">
                   <Lk className="w-4 h-4" /> My Resume
                 </span>
