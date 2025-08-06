@@ -44,7 +44,7 @@ export default function Hero() {
               </Button>
 
               <Link
-                href="https://drive.google.com/file/d/1ylVU7KhOG9xjM0o9mt586RuhzRwh-TfF/view?usp=sharing"
+                href="https://drive.google.com/file/d/1lZpIR6DoSsi0Rm5u5WY2CncpxMIR2C9K/view?usp=sharing"
                 target="_blank"
                 className="text-white"
               >
