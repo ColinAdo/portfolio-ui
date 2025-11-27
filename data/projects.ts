@@ -16,6 +16,7 @@ export const projects = [
       "Neon Postgres",
       "Shadcn UI",
       "Groq AI",
+      "Oauth2.0",
       "WebSockets",
     ],
     demoUrl: "https://monie.colinadore.tech",
@@ -23,23 +24,51 @@ export const projects = [
     uiCodeUrl: "https://github.com/ColinAdo/monie-ui",
   },
   {
-    title: "Task Management App",
+    title: "Timeable",
     description:
-      "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "/colin.jpg",
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
+      "Timeable is an intelligent automatic timetabling system built for universities, \
+      powered by a genetic algorithm. Users simply upload an Excel file containing unit \
+      codes and names, and Timeable processes the data to generate an optimized timetable with \
+       minimal clashes. It streamlines scheduling, reduces human error, and delivers fast, reliable, \
+        and collision-free timetables.",
+    image: "/timeable.jpg",
+    tech: [
+      "Django Rest Framwork",
+      "Typescript",
+      "Nextjs",
+      "Tailwind CSS",
+      "Neon Postgres",
+      "Shadcn UI",
+      "Groq AI",
+      "M-pesa API",
+      "WebSockets",
+    ],
     demoUrl: "#",
-    apiCodeUrl: "#",
-    uiCodeUrl: "#",
+    apiCodeUrl: "https://github.com/ColinAdo/timeable-api",
+    uiCodeUrl: "https://github.com/ColinAdo/timeable-ui",
   },
   {
-    title: "Analytics Dashboard",
+    title: "Warehouse Ecommerce",
     description:
-      "Data visualization dashboard for business metrics with interactive charts, real-time data updates, and export functionality.",
-    image: "/colin.jpg",
-    tech: ["React", "D3.js", "Python", "FastAPI"],
+      "A streamlined eCommerce and inventory management platform designed\
+       to help track stock, manage orders, and process sales efficiently. It \
+       offers real-time inventory visibility, automated order updates, and seamless product \
+       management, enabling accuracy and speed. It simplifies\
+        warehouse operations while delivering a smooth shopping experience for customers.",
+    image: "/poss.png",
+    tech: [
+      "Nodejs",
+      "Expressjs",
+      "MongoDB",
+      "Typescript",
+      "Nextjs",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "M-pesa API",
+      "WebSockets",
+    ],
     demoUrl: "#",
-    apiCodeUrl: "#",
-    uiCodeUrl: "#",
+    apiCodeUrl: "https://github.com/ColinAdo/timber-pos",
+    uiCodeUrl: "https://github.com/ColinAdo/pos-ui",
   },
 ];

@@ -1,47 +1,56 @@
 export const reviews = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Product Manager at TechCorp",
+    name: "Moses Mutuku",
+    role: "Software Developer (Supervisor) at eProd Solutions",
     avatar: "/placeholder.svg",
     rating: 5,
     review:
-      "Outstanding work! The attention to detail and ability to deliver on time exceeded our expectations. Highly recommend for any development project.",
+      "Colin consistently demonstrated exceptional problem-solving skills and a strong ability to learn fast. His commitment to delivering quality work made him a valuable member of our development team.",
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "CEO at StartupXYZ",
+    name: "Davis",
+    role: "Software Developer at St. Paul's University",
     avatar: "/placeholder.svg",
     rating: 5,
     review:
-      "Incredible technical skills combined with great communication. Transformed our vision into a beautiful, functional application that our users love.",
+      "Working with Colin was an excellent experience. He is proactive, skilled, and always ready to collaborate. His contribution to our projects was always reliable and impactful.",
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    role: "Design Director at CreativeStudio",
+    name: "Victor",
+    role: "Software Developer at PICZANGU",
     avatar: "/placeholder.svg",
     rating: 5,
     review:
-      "A true professional who brings creative solutions to complex problems. The collaboration was seamless and the results speak for themselves.",
+      "Colin brings both technical expertise and a great attitude to the table. He approaches challenges with creativity and precision, making him a fantastic teammate.",
   },
   {
     id: 4,
-    name: "David Wilson",
-    role: "CTO at InnovateLab",
+    name: "Benedict",
+    role: "Quality Assurance at eProd Solutions",
     avatar: "/placeholder.svg",
     rating: 5,
     review:
-      "Exceptional developer with a keen eye for user experience. Delivered a product that exceeded all our performance metrics.",
+      "Colin writes clean, well-structured code that makes QA work smooth. His attention to detail and openness to feedback made collaboration efficient and enjoyable.",
   },
   {
     id: 5,
-    name: "Lisa Thompson",
-    role: "Marketing Director at GrowthCo",
+    name: "Kipkuech",
+    role: "Business Analyst at eProd Solutions",
     avatar: "/placeholder.svg",
     rating: 5,
     review:
-      "Professional, reliable, and incredibly talented. The website they built has significantly improved our conversion rates.",
+      "I was impressed by Colin's ability to understand business requirements quickly and translate them into practical technical solutions. He is dependable, analytical, and highly resourceful.",
+  },
+  {
+    id: 6,
+    name: "Ann",
+    role: "Client Relations Officer at eProd Solutions",
+    avatar: "/placeholder.svg",
+    rating: 5,
+    review:
+      "Colin's professionalism and communication skills stood out throughout our collaboration. He handled client needs with clarity and ensured smooth coordination between teams.",
   },
 ];
