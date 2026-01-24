@@ -43,7 +43,7 @@ export default function Hero() {
                 View my work
               </Button>
 
-              <Link
+              {/* <Link
                 href="https://drive.google.com/file/d/1lZpIR6DoSsi0Rm5u5WY2CncpxMIR2C9K/view?usp=sharing"
                 target="_blank"
                 className="text-white"
@@ -51,7 +51,7 @@ export default function Hero() {
                 <span className="flex items-center gap-1 text-emerald-100 hover:text-emerald-300 font-semibold">
                   <Lk className="w-4 h-4" /> My Resume
                 </span>
-              </Link>
+              </Link> */}
             </div>
           </div>
 
