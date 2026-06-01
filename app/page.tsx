@@ -1,21 +1,37 @@
+"use client";
+
+import { useState } from "react";
 import {
-  Hero,
-  Skills,
-  Reviews,
-  Contact,
-  Projects,
-  ScrollToTop,
+  LoadingScreen,
+  NavBar,
+  HeroSection,
+  SelectedWorks,
+  JournalSection,
+  Explorations,
+  StatsSection,
+  FooterSection,
 } from "@/components/common";
 
 export default function Page() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      <Hero />
-      <Skills />
-      <Reviews />
-      <Projects />
-      <Contact />
-      <ScrollToTop />
+    <div className="bg-bg min-h-screen">
+      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+
+      {!isLoading && (
+        <>
+          <NavBar />
+          <main>
+            <HeroSection />
+            <SelectedWorks />
+            <JournalSection />
+            <Explorations />
+            <StatsSection />
+            <FooterSection />
+          </main>
+        </>
+      )}
     </div>
   );
 }
