@@ -44,7 +44,7 @@
   --color-bg: hsl(0 0% 4%);
   --color-surface: hsl(0 0% 8%);
   --color-text-primary: hsl(0 0% 96%);
-  --color-stroke: hsl(0 0% 12%);
+  --color-stroke: #c2ffe1;
 }
 
 @theme {
