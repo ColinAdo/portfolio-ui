@@ -7,7 +7,8 @@ import { useRouter } from "next/navigation";
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Work", href: "#works" },
-  { label: "Resume", href: "/resume" },
+  { label: "Thoughts", href: "#journal" },
+  { label: "Reviews", href: "#explorations" },
 ];
 
 export default function NavBar() {
