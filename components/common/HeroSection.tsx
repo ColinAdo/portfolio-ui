@@ -52,7 +52,7 @@ export default function HeroSection() {
       tl.fromTo(
         ".name-reveal",
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1.2, delay: 0.1 }
+        { opacity: 1, y: 0, duration: 1.2, delay: 0.1 },
       ).fromTo(
         ".blur-in",
         { opacity: 0, filter: "blur(10px)", y: 20 },
@@ -63,7 +63,7 @@ export default function HeroSection() {
           duration: 1,
           stagger: 0.1,
         },
-        "<0.2"
+        "<0.2",
       );
     }, heroRef);
 
@@ -155,16 +155,6 @@ export default function HeroSection() {
               Reach out...
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-xs text-muted uppercase tracking-[0.2em]">
-          SCROLL
-        </span>
-        <div className="relative w-px h-10 bg-stroke overflow-hidden">
-          <div className="absolute inset-0 accent-gradient animate-scroll-down" />
         </div>
       </div>
     </section>

@@ -121,7 +121,7 @@ export default function FooterSection() {
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 text-xs text-muted hover:text-text-primary transition-colors uppercase tracking-[0.1em]"
+                className="flex items-center gap-1.5 text-xs text-[#c2ffe1] hover:opacity-70 transition-opacity uppercase tracking-[0.1em]"
               >
                 <Icon size={14} />
                 {label}
