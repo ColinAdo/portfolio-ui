@@ -82,7 +82,7 @@ export default function FooterSection() {
         <div className="overflow-hidden mb-12 md:mb-16">
           <div
             ref={marqueeRef}
-            className="inline-flex whitespace-nowrap text-stroke/40 text-xs uppercase tracking-[0.4em] py-3 select-none"
+            className="inline-flex whitespace-nowrap text-[#c2ffe1] text-xs uppercase tracking-[0.4em] py-3 select-none"
           >
             {MARQUEE_TEXT.repeat(20)}
           </div>
@@ -90,7 +90,7 @@ export default function FooterSection() {
 
         {/* CTA block */}
         <div className="text-center mb-16">
-          <p className="text-xs text-muted uppercase tracking-[0.3em] mb-6">
+          <p className="text-xs text-[#c2ffe1] uppercase tracking-[0.3em] mb-6">
             Available for new projects
           </p>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-display italic text-text-primary leading-[0.9] mb-10">
@@ -124,7 +124,7 @@ export default function FooterSection() {
                 className="flex items-center gap-1.5 text-xs text-[#c2ffe1] hover:opacity-70 transition-opacity uppercase tracking-[0.1em]"
               >
                 <Icon size={14} />
-                {label}
+                <span className="hidden sm:inline">{label}</span>
               </Link>
             ))}
           </div>
