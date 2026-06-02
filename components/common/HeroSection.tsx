@@ -4,38 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 
-const HLS_SRC =
-  "https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8";
-
 const ROLES = ["Creative", "Fullstack", "Founder", "Engineer"];
 
 export default function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const heroRef = useRef<HTMLElement>(null);
   const [roleIndex, setRoleIndex] = useState(0);
-
-  /* ── HLS video ─────────────────────────────────────────── */
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    let hlsInstance: { destroy: () => void } | null = null;
-
-    import("hls.js").then(({ default: Hls }) => {
-      if (Hls.isSupported()) {
-        const hls = new Hls({ startLevel: -1 });
-        hls.loadSource(HLS_SRC);
-        hls.attachMedia(video);
-        hlsInstance = hls;
-      } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-        video.src = HLS_SRC;
-      }
-    });
-
-    return () => {
-      hlsInstance?.destroy();
-    };
-  }, []);
 
   /* ── Role cycling ──────────────────────────────────────── */
   useEffect(() => {
@@ -76,17 +49,9 @@ export default function HeroSection() {
       ref={heroRef}
       className="relative h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background video */}
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
-        />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-bg" />
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-bg to-transparent" />
       </div>
 
