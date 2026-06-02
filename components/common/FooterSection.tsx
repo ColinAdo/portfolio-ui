@@ -3,15 +3,16 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
+import { Twitter, Linkedin, Github, Instagram } from "lucide-react";
 
 const HLS_SRC =
   "https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8";
 
 const SOCIALS = [
-  { label: "Twitter", href: "https://x.com/Colin_Ado" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/colinado" },
-  { label: "GitHub", href: "https://github.com/ColinAdo" },
-  { label: "Instagram", href: "https://www.instagram.com/colinadore30" },
+  { label: "Twitter", href: "https://x.com/Colin_Ado", Icon: Twitter },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/colinado", Icon: Linkedin },
+  { label: "GitHub", href: "https://github.com/ColinAdo", Icon: Github },
+  { label: "Instagram", href: "https://www.instagram.com/colinadore30", Icon: Instagram },
 ];
 
 const MARQUEE_TEXT = "BUILDING THE FUTURE • ";
@@ -114,14 +115,15 @@ export default function FooterSection() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-stroke">
           {/* Socials */}
           <div className="flex items-center gap-6">
-            {SOCIALS.map(({ label, href }) => (
+            {SOCIALS.map(({ label, href, Icon }) => (
               <Link
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className="text-xs text-muted hover:text-text-primary transition-colors uppercase tracking-[0.1em]"
+                className="flex items-center gap-1.5 text-xs text-muted hover:text-text-primary transition-colors uppercase tracking-[0.1em]"
               >
+                <Icon size={14} />
                 {label}
               </Link>
             ))}
