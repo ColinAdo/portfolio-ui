@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 const HLS_SRC =
   "https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8";
@@ -91,9 +92,21 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <p className="blur-in text-xs text-muted uppercase tracking-[0.3em] mb-8">
+        <p className="blur-in text-xs text-muted uppercase tracking-[0.3em] mb-6">
           COLLECTION &apos;26
         </p>
+
+        <div className="blur-in flex justify-center mb-6">
+          <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-stroke">
+            <Image
+              src="/colin.jpg"
+              alt="Colin Ado"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
 
         <h1 className="name-reveal text-6xl md:text-8xl lg:text-9xl font-display italic leading-[0.9] tracking-tight text-text-primary mb-6">
           Colin Ado
