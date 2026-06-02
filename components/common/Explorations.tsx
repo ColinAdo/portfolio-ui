@@ -5,12 +5,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ITEMS = [
-  { id: 1, image: "https://picsum.photos/seed/ex1/400/400", rotation: -3 },
-  { id: 2, image: "https://picsum.photos/seed/ex2/400/400", rotation: 2 },
-  { id: 3, image: "https://picsum.photos/seed/ex3/400/400", rotation: -2 },
-  { id: 4, image: "https://picsum.photos/seed/ex4/400/400", rotation: 4 },
-  { id: 5, image: "https://picsum.photos/seed/ex5/400/400", rotation: -1 },
-  { id: 6, image: "https://picsum.photos/seed/ex6/400/400", rotation: 3 },
+  { id: 1, image: "/review1.png", rotation: -3 },
+  { id: 2, image: "/review2.png", rotation: 2 },
+  { id: 3, image: "/review3.png", rotation: -2 },
+  { id: 4, image: "/review4.png", rotation: 4 },
+  { id: 5, image: "/review5.png", rotation: -1 },
+  { id: 6, image: "/review6.png", rotation: 3 },
 ];
 
 const COL_A = ITEMS.slice(0, 3);
@@ -53,7 +53,7 @@ export default function Explorations() {
           end: "bottom top",
           scrub: 1.5,
         },
-      }
+      },
     );
 
     const p2 = gsap.fromTo(
@@ -68,7 +68,7 @@ export default function Explorations() {
           end: "bottom top",
           scrub: 1.5,
         },
-      }
+      },
     );
 
     return () => {
@@ -90,40 +90,19 @@ export default function Explorations() {
           ref={contentRef}
           className="relative z-10 h-screen flex flex-col items-center justify-center text-center px-6"
         >
-          <div className="flex items-center gap-3 mb-4 justify-center">
-            <div className="w-8 h-px bg-stroke" />
-            <span className="text-xs text-muted uppercase tracking-[0.3em]">
-              Explorations
-            </span>
-            <div className="w-8 h-px bg-stroke" />
-          </div>
-
           <h2 className="text-3xl md:text-5xl font-display italic text-text-primary leading-tight mb-4">
-            Visual <em className="font-display italic">playground</em>
+            <em className="font-display italic">Reviews</em>
           </h2>
-
-          <p className="text-sm text-muted max-w-xs mb-8">
-            A collection of visual experiments and creative explorations.
-          </p>
-
-          <div className="relative group inline-flex hover:scale-105 transition-transform">
-            <span className="absolute -inset-0.5 rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-            <a
-              href="https://dribbble.com"
-              target="_blank"
-              rel="noreferrer"
-              className="relative flex items-center gap-2 rounded-full border border-stroke px-5 py-2.5 text-sm text-text-primary bg-bg group-hover:border-transparent transition-colors"
-            >
-              View on Dribbble ↗
-            </a>
-          </div>
         </div>
 
         {/* Layer 2 — Parallax columns */}
         <div className="absolute inset-0 z-20 flex items-start justify-center pointer-events-none px-6">
           <div className="relative w-full max-w-[1400px] grid grid-cols-2 gap-12 md:gap-40 pt-[10vh]">
             {/* Column A */}
-            <div ref={col1Ref} className="flex flex-col gap-6 md:gap-8 items-end pointer-events-auto">
+            <div
+              ref={col1Ref}
+              className="flex flex-col gap-6 md:gap-8 items-end pointer-events-auto"
+            >
               {COL_A.map((item) => (
                 <button
                   key={item.id}
@@ -143,7 +122,10 @@ export default function Explorations() {
             </div>
 
             {/* Column B */}
-            <div ref={col2Ref} className="flex flex-col gap-6 md:gap-8 items-start mt-32 pointer-events-auto">
+            <div
+              ref={col2Ref}
+              className="flex flex-col gap-6 md:gap-8 items-start mt-32 pointer-events-auto"
+            >
               {COL_B.map((item) => (
                 <button
                   key={item.id}
