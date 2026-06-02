@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: "Work", href: "#works" },
   { label: "Thoughts", href: "#journal" },
   { label: "Reviews", href: "#explorations" },
+  { label: "Experience", href: "#stats" },
 ];
 
 export default function NavBar() {

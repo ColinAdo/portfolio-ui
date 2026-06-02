@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const STATS = [
-  { value: "3+", label: "Years Experience" },
+  { value: "4+", label: "Years Experience" },
   { value: "5+", label: "Projects Shipped" },
   { value: "100%", label: "Satisfied Clients" },
 ];
@@ -12,6 +12,13 @@ export default function StatsSection() {
   return (
     <section id="stats" className="bg-bg py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-8 h-px bg-stroke" />
+          <span className="text-xs text-muted uppercase tracking-[0.3em]">
+            Experience
+          </span>
+        </div>
+
         <div className="w-full h-px bg-stroke mb-16" />
 
         <div className="grid grid-cols-3 gap-4 md:gap-8 text-center">
